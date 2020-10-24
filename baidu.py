@@ -24,7 +24,9 @@ import traceback
 #         run_bat()
 #         print ("退出线程：")
 def run_bat():
-    subprocess.call(r'C:\code\ChromeSelenium\run_chrom.bat')
+    bat_path = os.path.dirname(os.path.abspath(__file__))
+
+    subprocess.call(os.path.join(bat_path, 'run_chrom.bat'))
 # thread1 = myThread()
 # thread1.start()
 
